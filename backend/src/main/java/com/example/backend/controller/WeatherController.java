@@ -22,7 +22,7 @@ public class WeatherController {
         this.webClient = webClient;
     }
 
-                             @Value("${visual_crossing_api}")
+    @Value("${visual_crossing_api}")
     private String apiKey;
 
     @GetMapping("{country}")
