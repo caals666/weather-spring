@@ -2,7 +2,7 @@
 
 [Roadmap Project](https://roadmap.sh/projects/weather-api-wrapper-service)
 
-![Weather App Frontend](react/public/project_frontend.png)
+![Weather App Frontend](react/public/frontend.png)
 
 A weather API wrapper service that fetches real-time forecasts from a 3rd-party weather provider ([Visual Crossing](https://www.visualcrossing.com/weather-api)) and caches responses in an in-memory [Redis](https://redis.io/) cache to minimize external network calls, prevent rate limiting, and deliver low-latency responses.
 
