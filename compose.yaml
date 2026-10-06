@@ -1,0 +1,29 @@
+# Same stack as docker-compose.yml so Compose picks up either filename.
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: "6379"
+      VISUAL_CROSSING_API: ${VISUAL_CROSSING_API}
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./react
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
