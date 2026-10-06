@@ -2,7 +2,7 @@
 
 [Roadmap](https://roadmap.sh/projects/weather-api-wrapper-service)
 
-![Weather App Frontend](react/public/project_frontend.png)
+![Weather App Frontend](react/public/frontend.png)
 
 A small weather app: a Spring Boot API that looks up a place on [Visual Crossing](https://www.visualcrossing.com/) and caches the result in Redis, plus a React UI to search cities.
 
